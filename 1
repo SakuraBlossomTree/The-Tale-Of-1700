@@ -49,8 +49,6 @@ def quit_menu():
 
 def minigame():
 
-    global player_money
-
     while True:
 
         print("Do you want to play the game")
@@ -73,66 +71,27 @@ def minigame():
 
             else:
 
-                print("Game Starts")
+                print("Guess what type of dice will come in the dealer's hand")
 
                 dice = []
 
-                dealer_dice = []
+                i = 0
 
-                i = 1 
+                while i < 5:
 
-                j = 1 
+                    print("Dice no " , i)
 
-                while i <= 5:
+                    ch = int(input("> "))
 
-                    player_dice = random.randint(1,6)
+                    if ch > 6:
 
-                    dice.append(player_dice)
+                        print("A dice won't have numbers over 6")
 
-                    i+=1
+                    else:
 
-                while j <= 5:
+                        dice.append(ch)
 
-                    dealer_die = random.randint(1,6)
-
-                    dealer_dice.append(dealer_die)
-
-                    j+=1
-
-                print("Dealer dice: " , dealer_dice)
-
-                sleep(2)
-
-                print("Player dice: " , dice)
-
-                dealer_sum = sum(dealer_dice)
-
-                player_sum = sum(dice)
-
-                sleep(2)
-
-                print(sum(dealer_dice))
-
-                sleep(2)
-
-                print(sum(dice))
-
-                if player_sum > dealer_sum:
-
-                    print("You win!")
-
-                    player_money += bet
-
-                elif dealer_sum > player_sum:
-
-                    print("You lose")
-
-                    player_money -= bet
-
-                else:
-
-                    print("Draw")
-
+                        i+=1
 
         elif choice == 'n':
 
@@ -155,8 +114,6 @@ def port_menu():
     print("PUB")
 
     print("SAIL")
-
-    print("Money: " , player_money)
 
 # Shop Menu
 

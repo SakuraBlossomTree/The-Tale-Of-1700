@@ -1,4 +1,3 @@
-from colorama import Fore , Back , Style , init , deinit
 from colors import *
 from time import sleep
 import os
