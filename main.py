@@ -11,6 +11,20 @@ import random
 player_name = ""
 player_money = 1000
 
+# Goods Value
+
+animal = 25
+
+harpoons = 10
+
+food = 25
+
+jew = 100
+
+cannons = 60
+
+cannon_balls = 10
+
 # Clear Function of easy usage
 
 def clear():
@@ -162,6 +176,8 @@ def port_menu():
 
 def shop():
 
+    global player_money
+
     while True:
 
         clear()
@@ -178,15 +194,17 @@ def shop():
 
         print("List of goods")
 
-        print("Animal Skins")
+        print("Animal Skins" , animal)
 
-        print("Harpoons")
+        print("Harpoons" , harpoons)
 
-        print("Food")
+        print("Food" , food)
 
-        print("Cannons")
+        print("Jewellery" , jew)
 
-        print("Cannon balls")
+        print("Cannons" , cannons)
+
+        print("Cannon balls" , cannon_balls)
 
         ch = str(input("> "))
 
@@ -194,7 +212,311 @@ def shop():
 
         if ch == 'b':
 
-            break
+            print("Press u to buy or a to go back")
+
+            choice = str(input("> "))
+
+            if choice == 'u':
+
+                print("You are buying goods")
+
+                print("1) Animal Skins" , animal)
+
+                print("2) Harpoons" , harpoons)
+
+                print("3) Food" , food)
+
+                print("4) Jewellery" , jew)
+
+                print("5) Cannons" , cannons)
+
+                print("6) Cannon balls" , cannon_balls)
+
+                print("What do you want to buy: ")
+
+                good_choice = int(input("> "))
+
+                match good_choice:
+
+                    case 1:
+
+                        print("Selected Animal Skins")
+
+                        print("How many you want to buy")
+
+                        no_of_food = int(input("> "))
+
+                        print(no_of_food)
+
+                        sleep(2)
+
+                        print(f"Are you sure you want to buy {no_of_food} Animal Skins")
+
+                        choice2 = str(input("> "))
+
+                        if choice2 == 'y':
+
+                            print("okay")
+
+                            player_money = player_money - (no_of_food * animal)
+
+                            if player_money < 0:
+
+                                print("You cannot buy these many Animal Skins")
+                                
+                                sleep(4)
+                                
+                                player_money = player_money + (no_of_food * animal)
+
+                            else:
+
+                                print("You are good to go")
+
+                                sleep(2)
+                                
+                        elif choice2 == 'n':
+
+                            break
+
+                        else:
+
+                            print("Invaild Argument")
+
+                        sleep(2)
+
+                    case 2:
+
+                        print("Selected Harpoons")
+                        
+                        print("How many you want to buy")
+
+                        no_of_food = int(input("> "))
+
+                        print(no_of_food)
+
+                        sleep(2)
+
+                        print(f"Are you sure you want to buy {no_of_food} Harpoons")
+
+                        choice2 = str(input("> "))
+
+                        if choice2 == 'y':
+
+                            print("okay")
+
+                            player_money = player_money - (no_of_food * harpoons)
+
+                            if player_money < 0:
+
+                                print("You cannot buy these many Harpoons")
+                                
+                                sleep(4)
+                                
+                                player_money = player_money + (no_of_food * harpoons)
+
+                            else:
+
+                                print("You are good to go")
+
+                                sleep(2)
+                                
+                        elif choice2 == 'n':
+
+                            break
+
+                        else:
+
+                            print("Invaild Argument")
+
+                        sleep(2) 
+                    
+                    case 3:
+
+                        print("Selected Food")
+
+                        print("How many you want to buy")
+
+                        no_of_food = int(input("> "))
+
+                        print(no_of_food)
+
+                        sleep(2)
+
+                        print(f"Are you sure you want to buy {no_of_food} Food")
+
+                        choice2 = str(input("> "))
+
+                        if choice2 == 'y':
+
+                            print("okay")
+
+                            player_money = player_money - (no_of_food * food)
+
+                            if player_money < 0:
+
+                                print("You cannot buy these many Food")
+                                
+                                sleep(4)
+                                
+                                player_money = player_money + (no_of_food * food)
+
+                            else:
+
+                                print("You are good to go")
+
+                                sleep(2)
+                                
+                        elif choice2 == 'n':
+
+                            break
+
+                        else:
+
+                            print("Invaild Argument")
+
+                        sleep(2)
+                    
+                    case 4:
+
+                        print("Selected Jewellery")
+
+                        print("How many you want to buy")
+
+                        no_of_food = int(input("> "))
+
+                        print(no_of_food)
+
+                        sleep(2)
+
+                        print(f"Are you sure you want to buy {no_of_food} Jewellery")
+
+                        choice2 = str(input("> "))
+
+                        if choice2 == 'y':
+
+                            print("okay")
+
+                            player_money = player_money - (no_of_food * jew)
+
+                            if player_money < 0:
+
+                                print("You cannot buy these many Jewellery")
+                                
+                                sleep(4)
+                                
+                                player_money = player_money + (no_of_food * jew)
+
+                            else:
+
+                                print("You are good to go")
+
+                                sleep(2)
+                                
+                        elif choice2 == 'n':
+
+                            break
+
+                        else:
+
+                            print("Invaild Argument")
+
+                        sleep(2)
+                    
+                    case 5:
+
+                        print("Selected Cannons")
+
+                        print("How many you want to buy")
+
+                        no_of_food = int(input("> "))
+
+                        print(no_of_food)
+
+                        sleep(2)
+
+                        print(f"Are you sure you want to buy {no_of_food} Cannons")
+
+                        choice2 = str(input("> "))
+
+                        if choice2 == 'y':
+
+                            print("okay")
+
+                            player_money = player_money - (no_of_food * cannons)
+
+                            if player_money < 0:
+
+                                print("You cannot buy these many Cannons")
+                                
+                                sleep(4)
+                                
+                                player_money = player_money + (no_of_food * cannons)
+
+                            else:
+
+                                print("You are good to go")
+
+                                sleep(2)
+                                
+                        elif choice2 == 'n':
+
+                            break
+
+                        else:
+
+                            print("Invaild Argument")
+
+                        sleep(2)
+                    
+                    case 6:
+
+                        print("Cannon balls")
+
+                        print("How many you want to buy")
+
+                        no_of_food = int(input("> "))
+
+                        print(no_of_food)
+
+                        sleep(2)
+
+                        print(f"Are you sure you want to buy {no_of_food} Cannon balls")
+
+                        choice2 = str(input("> "))
+
+                        if choice2 == 'y':
+
+                            print("okay")
+
+                            player_money = player_money - (no_of_food * cannon_balls)
+
+                            if player_money < 0:
+
+                                print("You cannot buy these many Cannon balls")
+                                
+                                sleep(4)
+                                
+                                player_money = player_money + (no_of_food * cannon_balls)
+
+                            else:
+
+                                print("You are good to go")
+
+                                sleep(2)
+                                
+                        elif choice2 == 'n':
+
+                            break
+
+                        else:
+
+                            print("Invaild Argument")
+
+                        sleep(2)
+            
+            elif choice == 'a':
+
+                break
 
         elif ch == 'q':
 
